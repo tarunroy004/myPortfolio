@@ -62,7 +62,7 @@ document.querySelector(".menuBtn").addEventListener("click", function() {
     opacity: 1,
     borderTopLeftRadius: "0%",
     borderBottomLeftRadius: "0%",
-    transition: "ease 0.1s"
+    transition: "ease 0.05s"
   })
 });
 document.querySelector(".close").addEventListener("click", function() {

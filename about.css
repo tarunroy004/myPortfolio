@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(/fonts/Gilroy-Black.ttf);
+}
+@font-face {
+  font-family: Gilroy-sbold;
+  src: url(/fonts/Gilroy-SemiBold.ttf);
+}
+@font-face {
+  font-family: Gilroy-light;
+  src: url(/fonts/Gilroy-Light.ttf);
+}
+@font-face {
+  font-family: Gilroy-thin;
+  src: url(/fonts/Gilroy-Thin.ttf);
+}
+@font-face {
+  font-family: Gilroy-med;
+  src: url(/fonts/Gilroy-Medium.ttf);
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: auto;
+    width: 100vw;
+    position: relative;
+}

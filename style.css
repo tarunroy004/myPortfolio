@@ -29,6 +29,7 @@ html, body {
     height: auto;
     width: 100vw;
     position: relative;
+    cursor: none;
 }
 
 
@@ -52,7 +53,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all ease 1.5s;
+  transition: all ease 1.2s;
  }
 
  .preloader i {
@@ -62,8 +63,8 @@ html, body {
 
  .preloader h2 {
   font-family: Gilroy-med;
-  color: #999D9E;
-  font-size: 25px;
+  color: #e8e8e8;
+  font-size: 40px;
  }
 
 
@@ -76,7 +77,7 @@ html, body {
   position: relative;
   overflow: hidden;
   opacity: 0;
-  transition: all ease 1s;
+  transition: all ease 0.8s;
 }
 
 .page1 nav {
@@ -90,6 +91,23 @@ html, body {
   color: #000;
   font-size: 19px;
   font-family: Gilroy-sbold;
+}
+
+.page1 nav .right .magnet a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transition: 0.3s;
+  border-radius: 25px;
+  transform: scaleX(0);
+  background: #861111;
+}
+
+.page1 nav .right .magnet a:hover::before {
+  transform: scaleX(1);
 }
 
 .page1 nav .right i {
@@ -447,6 +465,7 @@ html, body {
 .page2 .work .eff{
   position: relative;
   overflow: hidden;
+  background-color: #e8e8e8;
 }
 .page2 .work .eff a {
   color: #000;

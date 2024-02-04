@@ -24,18 +24,16 @@ Shery.makeMagnet(".magnet", {
 // Pre Loader -----
 const arr = ["Hello", "नमस्ते", "નમસ્તે", "ഹലോ", "హలో", "নমস্কার"]
 let i = 0;
-function preload() {
-  setInterval(() => {
-    document.querySelector("#preloadh2").innerHTML = arr[i];
-    i++
-    if (i==arr.length) {
-      i = 0;
-    }
-  }, 250)
-}
-preload();
 
+let preload = setInterval(() => {
+  document.querySelector("#preloadh2").innerHTML = arr[i];
+  i++
+  if (i==arr.length) {
+    i = 0;
+  }
+}, 250)
 
+  
 window.addEventListener("load", () => {
   setInterval(() => {
     gsap.to(".preloader", {
@@ -46,6 +44,10 @@ window.addEventListener("load", () => {
     gsap.to(".page1", {
       opacity: 1,
     })
+    gsap.to("body", {
+      cursor: "default",
+    })
+    clearInterval(preload);
   }, 1800)
 })
 

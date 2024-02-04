@@ -21,6 +21,34 @@ Shery.makeMagnet(".magnet", {
 
 // Script -----
 
+// Pre Loader -----
+const arr = ["নমস্কার", "Hello", "नमस्ते", "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", "नमस्कार", "નમસ્તે", "ഹലോ", "హలో", "নমস্কার"]
+let i = 0;
+function preload() {
+  setInterval(() => {
+    document.querySelector("#preloadh2").innerHTML = arr[i];
+    i++
+    if (i==arr.length) {
+      i = 0;
+    }
+  }, 250)
+}
+preload();
+
+
+window.addEventListener("load", () => {
+  setInterval(() => {
+    gsap.to(".preloader", {
+      top: "-100%",
+      borderBottomLeftRadius: "50%",
+      borderBottomRightRadius: "50%",
+    })
+    gsap.to(".page1", {
+      opacity: 1,
+    })
+  }, 2300)
+})
+
 //Text Scrolling --- 
 let currentScroll = 0;
 let isScrollingDown = true;

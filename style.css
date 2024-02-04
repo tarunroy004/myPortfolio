@@ -34,6 +34,39 @@ html, body {
 
  /*______________________________________________  */
 
+ /* Pre Loader */
+
+ #main {
+  height: auto;
+  width: 100%;
+  background-color: #1C1D20;
+ }
+
+ .preloader {
+  z-index: 1999;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1C1D20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease 1.5s;
+ }
+
+ .preloader i {
+  color: #999D9E;
+  font-size: 11px;
+ }
+
+ .preloader h2 {
+  font-family: Gilroy-med;
+  color: #999D9E;
+  font-size: 25px;
+ }
 
 
 /* page 1 ------------------------------------------ */
@@ -44,6 +77,8 @@ html, body {
   background-color: #c8c8c8;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transition: all ease 1s;
 }
 
 .page1 nav {
@@ -296,6 +331,7 @@ html, body {
   width: 100%;
   padding: 20vh 16vh 5vh 16vh;
   position: relative;
+  background-color: #e8e8e8;
 }
 
 .page2 .work {
@@ -491,6 +527,7 @@ html, body {
 .page3 {
   width: 100%;
   overflow: hidden;
+  background-color: #e8e8e8;
 }
 
 .page3 .container2 {

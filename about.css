@@ -199,6 +199,16 @@ width: 100%;
   letter-spacing: -1px;
 }
 
+.page1 .menu .top .work {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.page1 .menu .top .work i {
+  font-size: 15px;
+}
+
 .page1 .info {
   width: 100%;
   padding: 8vh 5vw;

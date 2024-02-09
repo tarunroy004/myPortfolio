@@ -7,16 +7,17 @@ const scroll = new LocomotiveScroll({
 
 
 // Shery JS -----
+const wdt = window.innerWidth;
 
-Shery.mouseFollower({
-  skew: true,
-});
-
-Shery.makeMagnet(".magnet", {
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 0.5,
-});
-
+if (wdt > 600) {
+  Shery.mouseFollower({
+    skew: true,
+  });
+  Shery.makeMagnet(".magnet", {
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 0.5,
+  });
+}
 
 
 // Script -----
@@ -28,16 +29,16 @@ let i = 0;
 let preload = setInterval(() => {
   document.querySelector("#preloadh2").innerHTML = arr[i];
   i++
-  if (i==arr.length) {
+  if (i == arr.length) {
     i = 0;
   }
 }, 250)
 
-  
+
 window.addEventListener("load", () => {
   setInterval(() => {
     gsap.to(".preloader", {
-      top: "-100%",
+      top: "-100vh",
       borderBottomLeftRadius: "50%",
       borderBottomRightRadius: "50%",
     })
@@ -85,66 +86,76 @@ window.addEventListener("scroll", function () {
 });
 
 //Menu -----
-document.querySelector(".menuBtn").addEventListener("click", function() {
+document.querySelector(".menuBtn").addEventListener("click", function () {
   gsap.to(".menu", {
     zIndex: 1000,
-    right : 0,
+    right: 0,
     opacity: 1,
     borderTopLeftRadius: "0%",
     borderBottomLeftRadius: "0%",
-    transition: "ease 0.05s"
+  })
+  gsap.to(".menuBtn", {
+    zIndex: 1,
   })
 });
-document.querySelector(".close").addEventListener("click", function() {
+document.querySelector(".close").addEventListener("click", function () {
   gsap.to(".menu", {
-    right : "-38%",
+    right: "-38%",
+    opacity: 0,
     borderTopLeftRadius: "700px",
     borderBottomLeftRadius: "700px",
-    ease: "linear"
+    ease: "linear",
+    zIndex: -1,
+  })
+  gsap.to(".menuBtn", {
+    zIndex: 9999,
   })
 });
 
 //Work Image showing ---
-document.querySelectorAll(".elem").forEach(function (elem) {
-  let rotate = 0;
-  let diffrot = 0;
+if (wdt > 600) {
 
-  elem.addEventListener("mousemove", function (dets) {
-    let diff = dets.clientY - elem.getBoundingClientRect().top;
-    diffrot = dets.clientX - rotate;
-    rotate = dets.clientX;
-    gsap.to(elem.querySelector("img"), {
-      opacity: 1,
-      ease: Power3,
-      top: diff,
-      left: dets.clientX,
-      rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
-    });
-    gsap.to(elem.querySelector("a"), {
-      opacity: 1,
-      ease: Power3,
-      top: diff,
-      left: dets.clientX,
-      rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
-    });
-  });
-  elem.addEventListener("mouseleave", function () {
-    gsap.to(elem.querySelector("img"), {
-      opacity: 0,
-      ease: Power1,
-    });
-  });
-  elem.addEventListener("mouseleave", function () {
-    gsap.to(elem.querySelector("a"), {
-      opacity: 0,
-      ease: Power3,
-    });
-  });
+  document.querySelectorAll(".elem").forEach(function (elem) {
+    let rotate = 0;
+    let diffrot = 0;
 
-})
+    elem.addEventListener("mousemove", function (dets) {
+      let diff = dets.clientY - elem.getBoundingClientRect().top;
+      diffrot = dets.clientX - rotate;
+      rotate = dets.clientX;
+      gsap.to(elem.querySelector("img"), {
+        opacity: 1,
+        ease: Power3,
+        top: diff,
+        left: dets.clientX,
+        rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
+      });
+      gsap.to(elem.querySelector("a"), {
+        opacity: 1,
+        ease: Power3,
+        top: diff,
+        left: dets.clientX,
+        rotate: gsap.utils.clamp(-20, 20, diffrot * 0.8),
+      });
+    });
+    elem.addEventListener("mouseleave", function () {
+      gsap.to(elem.querySelector("img"), {
+        opacity: 0,
+        ease: Power1,
+      });
+    });
+    elem.addEventListener("mouseleave", function () {
+      gsap.to(elem.querySelector("a"), {
+        opacity: 0,
+        ease: Power3,
+      });
+    });
+
+  })
+}
 
 // Get time -----
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   function addZ(num) {
     return num < 10 ? `0${num}` : num;
   }
@@ -181,3 +192,14 @@ timeBtn.addEventListener("click", function () {
   time.innerHTML = current_time;
 
 })
+
+
+// width < 600
+
+if (wdt <= 600) {
+  gsap.to(".tap", {
+    opacity: 1,
+    top: "80%",
+    left: "105vw"
+  })
+}

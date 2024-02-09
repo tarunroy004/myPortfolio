@@ -1,47 +1,53 @@
 @font-face {
-    font-family: Gilroy;
-    src: url(./fonts/Gilroy-Black.woff2);
+  font-family: Gilroy;
+  src: url(./fonts/Gilroy-Black.woff2);
 }
+
 @font-face {
   font-family: Gilroy-sbold;
   src: url(./fonts/Gilroy-SemiBold.woff2);
 }
+
 @font-face {
   font-family: Gilroy-light;
   src: url(./fonts/Gilroy-Light.woff2);
 }
+
 @font-face {
   font-family: Gilroy-thin;
   src: url(./fonts/Gilroy-Thin.woff2);
 }
+
 @font-face {
   font-family: Gilroy-med;
   src: url(./fonts/Gilroy-Medium.woff2);
 }
 
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-html, body {
-    height: auto;
-    width: 100vw;
-    position: relative;
-    cursor: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+html,
+body {
+  height: auto;
+  width: 100vw;
+  position: relative;
+  cursor: none;
+}
 
- /*______________________________________________  */
 
- /* Pre Loader */
+/*______________________________________________  */
 
- #main {
+/* Pre Loader */
+
+#main {
   background-color: #1C1D20;
- }
+}
 
- .preloader {
+.preloader {
   z-index: 1999;
   height: 100vh;
   width: 100vw;
@@ -53,19 +59,21 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all ease 1.2s;
- }
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transition: all ease-out 0.5s;
+}
 
- .preloader i {
+.preloader i {
   color: #999D9E;
   font-size: 11px;
- }
+}
 
- .preloader h2 {
+.preloader h2 {
   font-family: Gilroy-med;
   color: #e8e8e8;
   font-size: 40px;
- }
+}
 
 
 /* page 1 ------------------------------------------ */
@@ -126,7 +134,7 @@ html, body {
   gap: 3vw;
 }
 
-.page1 img{
+.page1 img {
   height: 100%;
   position: absolute;
   bottom: 0;
@@ -134,14 +142,14 @@ html, body {
   z-index: 10;
 }
 
-.page1 .bg{
+.page1 .bg {
   z-index: 9;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 10vh;
-  background-color: #999d9e ;
+  background-color: #999d9e;
 }
 
 .marquee {
@@ -163,11 +171,12 @@ html, body {
   flex-direction: row;
 }
 
-.marqpart{
+.marqpart {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 0 4px;;
+  padding: 0 4px;
+  ;
 }
 
 .marqpart h1 {
@@ -206,7 +215,7 @@ html, body {
   gap: 5px;
 }
 
-.page1 .locate .right h3{
+.page1 .locate .right h3 {
   font-family: Gilroy-light;
   font-size: 18px;
   color: #fff;
@@ -220,7 +229,8 @@ html, body {
   padding: 25px;
   border-radius: 100px;
 }
-.page1 .locate .left i{
+
+.page1 .locate .left i {
   font-size: 30px;
 }
 
@@ -237,6 +247,7 @@ html, body {
 .page1 .job .top i {
   font-size: 30px;
 }
+
 .page1 .job .bottom h2 {
   font-family: Gilroy-light;
   font-size: 40px;
@@ -257,7 +268,9 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5%; 
+  padding: 5%;
+  overflow: hidden;
+  transition: "ease 0.05s"
 }
 
 .page1 .menu .close {
@@ -386,13 +399,13 @@ html, body {
 
 .page2 .work .container .conthead h5 {
   font-family: Gilroy-thin;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .page2 .work .container .conthead {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin: 4vh 0;
 }
 
@@ -436,7 +449,8 @@ html, body {
   transform: translate(-83%, -50%);
   transition: all ease 0.1s;
 }
-.page2 .work .container .card .left a{
+
+.page2 .work .container .card .left a {
   opacity: 0;
   height: fit-content;
   width: fit-content;
@@ -450,7 +464,8 @@ html, body {
   border-radius: 100px;
   padding: 20px 16px;
   color: #fff;
-  transform: translate(-280%, -50%);;
+  transform: translate(-280%, -50%);
+  ;
 }
 
 .page2 .work .container .card .left h3 {
@@ -470,13 +485,14 @@ html, body {
   border-radius: 100px;
   margin-top: 10vh;
   align-self: center;
-} 
+}
 
-.page2 .work .eff{
+.page2 .work .eff {
   position: relative;
   overflow: hidden;
   background-color: #e8e8e8;
 }
+
 .page2 .work .eff a {
   color: #000;
   text-decoration: none;
@@ -484,7 +500,8 @@ html, body {
   z-index: 9;
   transition: all ease 0.3s;
 }
-.page2 .work .eff::after{
+
+.page2 .work .eff::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -495,12 +512,14 @@ html, body {
   border-radius: 50%;
   transition: all ease 0.3s;
 }
-.page2 .work .eff:hover::after{
+
+.page2 .work .eff:hover::after {
   bottom: 0;
   border-radius: 0;
   color: #fff;
 }
-.page2 .work .eff:hover a{
+
+.page2 .work .eff:hover a {
   color: #fff;
 }
 
@@ -527,7 +546,7 @@ html, body {
   transition: ease 0.3s;
 }
 
-.page2 .about::after{
+.page2 .about::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -540,12 +559,13 @@ html, body {
   transition: ease 0.35s;
 }
 
-.page2 .about:hover::after{
+.page2 .about:hover::after {
   bottom: 0;
   border-radius: 0;
   color: #fff;
 }
-.page2 .about:hover a{
+
+.page2 .about:hover a {
   color: #fff;
   z-index: 1;
 }
@@ -602,7 +622,7 @@ html, body {
   background-color: #1C1D20;
   display: flex;
   justify-content: center;
-} 
+}
 
 .page4 .contact {
   display: flex;
@@ -618,7 +638,7 @@ html, body {
   flex-direction: column;
 }
 
-.page4 .contact .top h2{
+.page4 .contact .top h2 {
   font-family: Gilroy-light;
   font-size: 6vw;
   letter-spacing: 5px;
@@ -654,7 +674,7 @@ html, body {
   gap: 1vw;
 }
 
-.page4 .contact .bottom .eff2{
+.page4 .contact .bottom .eff2 {
   font-family: Gilroy-light;
   font-size: 25px;
   border: 1px solid #d3d3d376;
@@ -668,6 +688,7 @@ html, body {
   transition: all ease 0.3s;
   overflow: hidden;
 }
+
 .page4 .contact .bottom .eff2 a {
   color: #fff;
   text-decoration: none;
@@ -675,10 +696,12 @@ html, body {
   z-index: 9;
   transition: all ease 0.3s;
 }
-.page4 .contact .bottom .eff2:hover a{
+
+.page4 .contact .bottom .eff2:hover a {
   color: #000;
 }
-.page4 .contact .bottom .eff2::after{
+
+.page4 .contact .bottom .eff2::after {
   content: "";
   height: 100%;
   width: 100%;
@@ -689,7 +712,8 @@ html, body {
   border-radius: 50%;
   transition: all ease 0.3s;
 }
-.page4 .contact .bottom .eff2:hover::after{
+
+.page4 .contact .bottom .eff2:hover::after {
   bottom: 0;
   border-radius: 0;
 }
@@ -736,4 +760,244 @@ html, body {
 .page4 .social .right {
   display: flex;
   gap: 2vw;
+}
+
+
+/* ----------------------------- */
+
+@media only screen and (max-width: 576px) {
+  .page1 {
+    background: linear-gradient(#ffffff, #999D9E);
+  }
+
+  .page1 nav {
+    margin: 3vh 1vh;
+  }
+
+  .page1 nav .right .a {
+    display: none;
+  }
+
+  .page1 nav .right .menuBtn {
+    z-index: 9999;
+  }
+
+  .page1 img {
+    height: 50%;
+    bottom: 30%;
+  }
+
+  .page1 .bg {
+    bottom: 30%;
+    background-color: #999D9E;
+  }
+
+  .page1 .marquee {
+    bottom: 17%;
+    left: 0;
+    z-index: 999;
+    gap: 98vw;
+  }
+
+  .page1 .marqpart h1 {
+    font-size: 20vw;
+  }
+
+  .page1 .locate {
+    top: 82%;
+  }
+
+  .page1 .locate .left i {
+    font-size: 25px;
+  }
+
+  .page1 .locate {
+    padding: 15px 40px 15px 15px;
+    gap: 25px;
+  }
+
+  .page1 .locate .right {
+    gap: 3px;
+  }
+
+  .page1 .job {
+    gap: 5vh;
+    top: 20%;
+    left: 60%;
+  }
+
+  .page1 .job .top i {
+    font-size: 20px;
+  }
+
+  .page1 .job .bottom h2 {
+    font-size: 30px;
+  }
+
+  .page1 .menu {
+    width: 70%;
+    padding: 5vh 5vw;
+  }
+
+  .page1 .menu .close i {
+    font-size: 8vw;
+  }
+
+  /* page 2 */
+
+  .page2 {
+    padding: 10vh 5vw 5vh 5vw;
+  }
+  .page2 .work .disc {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 10vh;
+    gap: 2vh;
+  }
+  .page2 .work .disc .left {
+    width: 100%;
+    font-size: 35px;
+  }
+  .page2 .work .disc .right {
+    width: 70%;
+    font-size: 19px;
+  }
+  .page2 .work .container .conthead h5 {
+    font-size: 18px;
+  }
+  .page2 .work .container .conthead {
+    justify-content: flex-start;
+    margin: 2vh 0;
+  }
+  /*  */
+  .page2 .work .container .card {
+    width: 100%;
+    border-top: 1px solid #c5c5c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  /*  */
+  .page2 .work .container .card .left {
+    padding: 8vh 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5vh;
+  }
+  .page2 .work .container .card .left h1 {
+    font-size: 50px;
+  }
+  .page2 .work .container .card .left img {
+    display: none;
+  }
+  .page2 .work .container .card .left h3 {
+    font-size: 19px;
+  }
+  .page2 .work .workbtn {
+    font-size: 18px;
+    padding: 15px 25px;
+    margin-top: 5vh;
+  }
+  .page2 .about {
+    top: 31.5%;
+    height: 10vh;
+    width: 10vh;
+  }
+  .page2 .about a {
+    font-size: 19px;
+  }
+
+  /* page 3 */
+
+  .page3 {
+    width: 100%;
+  }
+  .page3 .container2 {
+    height: auto;
+    width: 100%;
+    padding: 5vh 5vw;
+  }
+
+  .page3 .container2 .card {
+    height: auto;
+    width: 100%;
+    padding: 5vh 4vw;
+  }
+  .page3 .container2 .card img {
+    width: 100%;
+  }
+  .page3 .container2 .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+  }
+  .page3 .container2 .bottom {
+    display: none;
+  }
+
+  /* page 4-------------------------- */
+
+  .page4 {
+    justify-content: center;
+    padding: 17vh 5vw 0 5vw;
+  }
+  .page4 .contact {
+    gap: 5vh;
+    width: 100%;
+    margin-top: 0;
+  }
+  .page4 .contact .top h2 {
+    font-size: 8vw;
+  }
+  .page4 .contact .top .one img {
+    height: 100px;
+    margin-right: 0;
+  }
+  .page4 .contact .top .one {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+  }
+  .page4 .contact .top .two i {
+    font-size: 25px;
+  }
+  .page4 .contact .bottom {
+    border-top: 1px solid #c5c5c560;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+  }
+  .page4 .contact .bottom .eff2 {
+    padding: 13px 30px;
+  }
+  .page4 .contact .bottom .eff2 a {
+    font-size: 18px;
+  }
+  .page4 .social {
+    align-items: flex-start;
+    gap: 2vh;
+  }
+  .page4 .social .card h5 {
+    font-size: 10px;
+  }
+  .page4 .social .card a {
+    font-size: 15px;
+    letter-spacing: 0.1px;
+  }
+  .page4 .social .left {
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .page4 .social .right {
+    gap: 2vw;
+    align-self: flex-end;
+  }
+  .page4 .social .right .card:nth-child(2) {
+    display: none;
+  }
+
 }

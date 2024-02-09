@@ -270,7 +270,7 @@ body {
   justify-content: space-between;
   padding: 5%;
   overflow: hidden;
-  transition: "ease 0.05s"
+  transition: "all ease 0.05s"
 }
 
 .page1 .menu .close {
@@ -837,6 +837,7 @@ body {
   .page1 .menu {
     width: 70%;
     padding: 5vh 5vw;
+    transition: "all ease 0.01s"
   }
 
   .page1 .menu .close i {
@@ -869,16 +870,12 @@ body {
     justify-content: flex-start;
     margin: 2vh 0;
   }
-  /*  */
   .page2 .work .container .card {
     width: 100%;
-    border-top: 1px solid #c5c5c5;
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  /*  */
   .page2 .work .container .card .left {
     padding: 8vh 0;
     flex-direction: column;
@@ -937,7 +934,7 @@ body {
     display: none;
   }
 
-  /* page 4-------------------------- */
+  /* page 4 */
 
   .page4 {
     justify-content: center;

@@ -8,7 +8,7 @@ const scroll = new LocomotiveScroll({
 
 // Shery JS -----
 const wdt = window.innerWidth;
-
+console.log(wdt)
 if (wdt > 600) {
   Shery.mouseFollower({
     skew: true,

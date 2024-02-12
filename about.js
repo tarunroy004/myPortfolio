@@ -91,9 +91,5 @@ timeBtn.addEventListener("click", function () {
 // width < 600
 
 if (wdth <= 600) {
-  gsap.to(".tap", {
-    opacity: 1,
-    top: "80%",
-    left: "105vw"
-  })
+  // 
 }
